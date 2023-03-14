@@ -20,7 +20,7 @@ client.on('ready', () => {
             const number = data[i]["WA"];
             const chatId = number.substring(1) + "@c.us";
             try {
-                const txt = "Selamat pagi calon petugas ST2023 \nSaudara diundang untuk seleksi wawancara pada: \nHari/Tanggal  : " + data[i]["Hari"] + "\nTempat	          : " + data[i]["Tempat"] + "\nJam                  : " +data[i]["Jam"] + "\n \nBerkas yang perlu dibawa agar didownload pada link http://s.bps.go.id/5102syaratST2023. Harap membaca dengan seksama *FILE PETUNJUK* pada link tersebut. Calon petugas harus memiliki akun SOBAT, jika belum harap segera install aplikasi SOBAT dari playstore dan melakukan registrasi. Berikut link tutorial pendaftaran akun SOBAT: https://www.youtube.com/watch?v=M84krAiiEd8 \n \nJika ada kendala silahkan hubungi: \nAri Sudana: wa.me/6281916535637\nRia Pratiwi: wa.me/6287761657832\nZenda Oka: wa.me/6282234232929";
+                const txt = "Selamat pagi calon petugas ST2023 \nSaudara diundang untuk seleksi wawancara pada: \nHari/Tanggal  : " + data[i]["Hari"] + "\nTempat	          : " + data[i]["Tempat"] + "\nJam                  : " +data[i]["Jam"] + "\n \nBerkas yang perlu dibawa agar didownload pada link http://s.bps.go.id/5102syaratST2023. Harap membaca dengan seksama *FILE PETUNJUK* pada link tersebut. Calon petugas harus memiliki akun SOBAT, jika belum harap segera install aplikasi SOBAT dari playstore dan melakukan registrasi. Berikut link tutorial pendaftaran akun SOBAT: https://www.youtube.com/watch?v=M84krAiiEd8";
                 
                 // Kirim pesan
                 client.sendMessage(chatId, txt);
