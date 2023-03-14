@@ -2,7 +2,7 @@ const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const client = new Client();
 const XLSX = require('xlsx');
-const workbook = XLSX.readFile("C:/Users/ASUS/Documents/Broadcast Whatsapp/database1.xlsx");
+const workbook = XLSX.readFile("C:/Users/ASUS/Documents/Broadcast Whatsapp/sample.xlsx");
 const sheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[sheetName];
 const data = XLSX.utils.sheet_to_json(sheet);
@@ -18,7 +18,7 @@ client.on('qr', qr => {
 
 client.on('ready', () => {
     async function kirim() { 
-        for (var i = 181; i < data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
             const number = data[i]["WA"];
             const chatId = number.substring(1) + "@c.us";
             try {
