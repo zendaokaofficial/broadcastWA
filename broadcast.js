@@ -9,8 +9,6 @@ const data = XLSX.utils.sheet_to_json(sheet);
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-
-
 // Generate QR Code
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
